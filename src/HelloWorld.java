@@ -1,4 +1,5 @@
 import arrays.*;
+import deques.*;
 /*
  * First Java Program
  */
