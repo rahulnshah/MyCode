@@ -1,4 +1,4 @@
-package Trees;
+package trees;
 public class IsSameTree {
 	    public boolean isSameTree(TreeNode p, TreeNode q) {
 	        /*
