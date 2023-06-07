@@ -6,7 +6,7 @@ public class LevelOrderTraverse {
         /**
             This is Breadth-First Search.  Breadth-First Search uses a queue.
 
-            Alogrthm:
+            Algorithm:
             Get the children at each level, 
             collect all in a list, 
             append the smaller list in bigger list and do this until, you reach the leaves, 
