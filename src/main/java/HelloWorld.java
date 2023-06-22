@@ -1,6 +1,7 @@
 import arrays.*;
 import java.util.Arrays;
 import treemap.HighFive;
+import backtracking.Subsets;
 import deques.*;
 /*
  * First Java Program
@@ -18,6 +19,11 @@ public class HelloWorld {
 		{
 			System.out.println(Arrays.toString(avgScore));
 		}
+
+		Subsets i = new Subsets();
+		int [] nums = {1,2,3};
+		System.out.println(i.subsets(nums));
+
 	}
 
 }

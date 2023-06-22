@@ -1,4 +1,4 @@
-package hashset;
+package hashmap;
 import java.util.*;
 public class MaxNumberOfBalloons {
     public int maxNumberOfBalloons(String text) {
