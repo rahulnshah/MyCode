@@ -1,11 +1,11 @@
-package main.sorting;
+package sorting;
 
 import java.util.Arrays;
 
 public class CustomSort {
     public String customSortString(String order, String s) {
         /*
-        Convert s array of characters, but using split("")
+        Convert s to an array of characters, but using split("")
         Sort the array like this:
             if the indexof(a in order) == indexOf(b in order)
                 return 0
