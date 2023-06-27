@@ -2,53 +2,52 @@ package trees;
 import java.util.List;
 import java.util.ArrayList;
 public class LevelOrderTraverse {
-	public List<List<Integer>> levelOrder(TreeNode root) {
+    public List<List<Integer>> levelOrder(TreeNode root) {
         /**
-            This is Breadth-First Search.  Breadth-First Search uses a queue.
+         This is Breadth-First Search.  Breadth-First Search uses a queue, but we can use a plain List here as well.
 
-            Algorithm:
-            Get the children at each level, 
-            collect all in a list, 
-            append the smaller list in bigger list and do this until, you reach the leaves, 
-            	because leaves don't have children from which u can get the children below them 
+         Algorithm:
+         if root exists, insert it in ans, and in children; assume root was a child of some parent
+         if children.size() > 0;
+         insert all children's vals into ans
+         let the children become parents
+         set children to empty List
+         Gather new children from parents
          */
 
-         List<List<Integer>> list = new ArrayList<>();
-         List<Integer> children = new ArrayList<>();
-         List<TreeNode> childrenTreeNodes = new ArrayList<>();
-         if(root != null)
-         {
-             childrenTreeNodes.add(root);
-             children.add(root.val);
-         }
+        List<List<Integer>> list = new ArrayList<>();
+        List<TreeNode> children = new ArrayList<>();
+        if(root != null)
+        {
+            children.add(root);
+        }
 
-         while(children.size() > 0)
-         {
-            
-            // add the children (which is a temp ArrayList) at that level to list ArrayList 
-            list.add(children);
+        while(children.size() > 0)
+        {
+
+            // add the children (which is a temp ArrayList) at that level to list ArrayList
+            List<Integer> temp = new ArrayList<>();
+            for(TreeNode child : children)
+            {
+                temp.add(child.val);
+            }
+            list.add(temp);
+            // make the TreeNode children parent
+            List<TreeNode> parents = children;
             // reset the children array
             children = new ArrayList<>();
-            // make the TreeNode children parent 
-            List<TreeNode> parentTreeNodes = childrenTreeNodes;
-            childrenTreeNodes = new ArrayList<TreeNode>();
-            // get the children of the parentNodes and add them to each list 
-            for(TreeNode firstOutNode : parentTreeNodes)
-            {
-                if(firstOutNode.left != null)
-                {
-                    childrenTreeNodes.add(firstOutNode.left);   
-                    children.add(firstOutNode.left.val);
+
+            // get the children of the parentNodes and add them to each list
+            for(TreeNode parent : parents) {
+                if (parent.left != null) {
+                    children.add(parent.left);
                 }
-                if(firstOutNode.right != null)
-                {
-                    childrenTreeNodes.add(firstOutNode.right);   
-                    children.add(firstOutNode.right.val);
+                if (parent.right != null) {
+                    children.add(parent.right);
                 }
             }
-            // in next iteration, if there were any new children added, they are ready to become parent
-         }
+        }
 
-         return list;
+        return list;
     }
 }
