@@ -8,11 +8,6 @@ public class RecursiveDepthFirstSearch {
         visited[nodeVal] = true;
         traversedNodes.add(nodeVal);
 
-        // no adjacent nodes to this node with nodeVal? Then no need to dfs
-        if(adjList.get(nodeVal).size() == 0)
-        {
-            return;
-        }
         // depth first search all nodes adj to nodeVal
         for(Integer adjNode : adjList.get(nodeVal))
         {
