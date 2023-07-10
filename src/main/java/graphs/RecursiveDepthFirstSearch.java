@@ -17,7 +17,7 @@ public class RecursiveDepthFirstSearch {
             }
         }
     }
-    public List<Integer> bfs(int V, List<List<Integer>> adjList){
+    public List<Integer> dfs(int V, List<List<Integer>> adjList){
         List<Integer> traversedNodes = new ArrayList<>();
         // we're making length of visited array V because we are assuming there are V 0-indexed nodes
         boolean [] visited = new boolean[V];
