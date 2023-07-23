@@ -30,7 +30,7 @@ public class ShortestPathDAG {
 
         traversed.push(index);
     }
-    public int [] shortestPath(int N, int M, int[][] edges)
+    public int [] shortestPath(int N, int[][] edges)
     {
         List<List<int []>> adjlist = new ArrayList<>();
         for(int i = 0; i < N; i++)

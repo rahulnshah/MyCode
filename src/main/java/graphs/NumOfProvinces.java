@@ -56,7 +56,7 @@ public class NumOfProvinces {
                 }
             }
         }
-        // we are given n vertices so the length of the visted array will be n + 1; indexed from 0 to n
+        // we are given n vertices so the length of the visited array will be n + 1; indexed from 0 to n
         boolean [] visited = new boolean[isConnected.length + 1];
 
         int count = 0;
