@@ -27,6 +27,7 @@ public class FindGreaterPermut {
                 permutation.add(letters[i]);
                 visited[i] = true;
                 res = permute(word, permutation, visited, letters);
+                // if u found the next greater one no need to generate more permutations
                 if(!(res.equals("no answer")))
                 {
                     return res;
