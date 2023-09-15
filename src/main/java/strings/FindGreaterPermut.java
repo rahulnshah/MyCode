@@ -11,6 +11,7 @@ public class FindGreaterPermut {
 
         if(permutation.size() == letters.length)
         {
+            // return the next alpha greater permutation immediately
             if(String.join("", permutation).compareTo(word) > 0)
             {
                 res = String.join("", permutation);
@@ -18,6 +19,7 @@ public class FindGreaterPermut {
             }
         }
         // loop through all the letters adding and removing same letter at a time
+        // If the above if stmt was true, each letter has been visisted, so I will not call permute anymore and return 'no answer' straight
         for(int i = 0; i < letters.length; i++)
         {
             if(!visited[i])
