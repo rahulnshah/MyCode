@@ -1,4 +1,4 @@
-package alotofmath;
+package math;
 
 public class FirstMissingPositive {
     public int firstMissingPositive(int[] nums) {

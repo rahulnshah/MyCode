@@ -1,4 +1,4 @@
-package alotofmath;
+package math;
 
 public class ColNumToTitle {
     public String convertToTitle(int columnNumber) {

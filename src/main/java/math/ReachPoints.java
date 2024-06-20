@@ -1,4 +1,4 @@
-package alotofmath;
+package math;
 
 public class ReachPoints {
     public boolean reachingPoints(int sx, int sy, int tx, int ty) {

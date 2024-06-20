@@ -1,4 +1,4 @@
-package alotofmath;
+package math;
 
 public class SortedSquares {
     public int[] sortedSquares(int[] nums) {

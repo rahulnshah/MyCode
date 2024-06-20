@@ -1,4 +1,4 @@
-package alotofmath;
+package math;
 
 public class MajorityElement {
     public int majorityElement(int[] nums) {
