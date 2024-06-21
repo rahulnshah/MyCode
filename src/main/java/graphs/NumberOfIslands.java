@@ -7,7 +7,7 @@ public class NumberOfIslands {
     {
         int n = grid.length, m = grid[0].length;
         Queue<List<Integer>> q = new LinkedList<>();
-        q.add(new ArrayList<>(Arrays.asList(nrow, ncol)));
+        q.add(Arrays.asList(nrow, ncol));
 
         // to represent the 4 directions I could traverse in a 2D matrix, like a grid
         int [] delRow = {0, 1, 0, -1};

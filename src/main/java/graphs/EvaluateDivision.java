@@ -15,7 +15,7 @@ public class EvaluateDivision {
 
 
         visited.add(src);
-        q.add(new ArrayList(Arrays.asList(src, 1.0)));
+        q.add(Arrays.asList(src, 1.0));
 
         while(!q.isEmpty())
         {
@@ -38,7 +38,7 @@ public class EvaluateDivision {
                 if(!visited.contains(nodeVal))
                 {
                     visited.add(nodeVal);
-                    q.add(new ArrayList(Arrays.asList(nodeVal, w * weight)));
+                    q.add(Arrays.asList(nodeVal, w * weight));
                 }
             }
         }
@@ -76,8 +76,8 @@ public class EvaluateDivision {
         {
             String a = equations.get(i).get(0), b = equations.get(i).get(1);
             // add empty buckets for each a and b
-            adj.get(a).add(new ArrayList(Arrays.asList(b, values[i])));
-            adj.get(b).add(new ArrayList(Arrays.asList(a, 1.0 / values[i])));
+            adj.get(a).add(Arrays.asList(b, values[i]));
+            adj.get(b).add(Arrays.asList(a, 1.0 / values[i]));
         }
 
         double [] res = new double[queries.size()];
