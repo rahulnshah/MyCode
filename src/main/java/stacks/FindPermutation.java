@@ -12,7 +12,7 @@ public List<Integer> findPermutation(String s){
     Pop remaining numbers from our stack and attach them to the ans list at the end. 
   */
   Stack<Integer> st = new Stack<>();
-  List<Integer> ans = new List<>();
+  List<Integer> ans = new ArrayList<>();
   int curNum = 1;
   // push 1 initially because that will make the permutation lexio smallest
   st.push(curNum);
