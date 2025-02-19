@@ -1,6 +1,8 @@
 package trees;
 public class TreeNode {
 	int val;
+
+	TreeNode parent;
 	 TreeNode left;
 	 TreeNode right;
 	 TreeNode() {}
