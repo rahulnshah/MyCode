@@ -30,26 +30,26 @@ class GoodJavaCodeSnippetsTest {
 
     @Test
     void switchAdjacentCharsOf_ShouldSwitchPairs() {
-        assertEquals("bacs", GoodJavaCodeSnippets.switchAdjacentCharsOf("abcs"));
+        assertEquals("bacs", GoodJavaCodeSnippets.switchAdjacentCharsOf("absc"));
         assertEquals("ba", GoodJavaCodeSnippets.switchAdjacentCharsOf("ab"));
     }
 
     @Test
     void switchAdjacentCharsOf_ShouldHandleOddLength() {
-        assertEquals("bacd", GoodJavaCodeSnippets.switchAdjacentCharsOf("abcd"));
+        assertEquals("bacde", GoodJavaCodeSnippets.switchAdjacentCharsOf("abdce"));
     }
 
     @Test
     void findSum_ShouldCalculateRangeSum() {
         int[] arr = {1, 2, 3, 4, 5};
         assertEquals(15, GoodJavaCodeSnippets.findSum(arr, 4, 0)); // sum of all elements
-        assertEquals(9, GoodJavaCodeSnippets.findSum(arr, 2, 0));  // sum of first 3 elements
+        assertEquals(6, GoodJavaCodeSnippets.findSum(arr, 2, 0));  // sum of first 3 elements
     }
 
     @Test
     void findNumOfOccurences_ShouldCountCorrectly() {
         assertEquals(2, GoodJavaCodeSnippets.findNumOfOccurences("hello hello world", "hello"));
         assertEquals(0, GoodJavaCodeSnippets.findNumOfOccurences("hello world", "xyz"));
-        assertEquals(3, GoodJavaCodeSnippets.findNumOfOccurences("aaaaa", "a"));
+        assertEquals(5, GoodJavaCodeSnippets.findNumOfOccurences("aaaaa", "a"));
     }
 }
