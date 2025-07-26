@@ -1,3 +1,5 @@
+package utils;
+
 public class GoodJavaCodeSnippets{
    public static void moveAll(int [] arr)
    {  
@@ -169,49 +171,4 @@ public class GoodJavaCodeSnippets{
       }
       return 0; 
    }
-   public static void main(String [] args){
-      int [] arr = {1,2};
-      char [] chars = {'a','b','c','d'};
-      int counter = 3;
-      String notAPalindrome = "car";
-      String isAPalindrome = "radar";
-      String oneLetter = "a";
-      String twoLetter = "ab";
-      //printCounterTimes(int [] arr, int counter)
-      printCounterTimes(arr, counter);
-      System.out.println();
-      //isPalindrome(String str)
-      System.out.println(isPalindrome(notAPalindrome));
-      System.out.println(isPalindrome(isAPalindrome));
-      System.out.println();
-      //compareStrings(String s1, String s2)
-      compareStrings(notAPalindrome, isAPalindrome);
-      System.out.println();
-      //switchAdjacentCharsOf(String str)
-      System.out.println(switchAdjacentCharsOf(notAPalindrome));
-      System.out.println(switchAdjacentCharsOf(isAPalindrome));
-      System.out.println(switchAdjacentCharsOf(oneLetter));
-      System.out.println(switchAdjacentCharsOf(twoLetter));
-      System.out.println();
-      //printNums(int factor, int ... numList)
-      printNums(3, 4, 5, 6, 7);
-      System.out.println();
-      //addElementInArray(int i, int num, int [] arr)
-      addElementInArray(0, counter, arr);
-      System.out.println(java.util.Arrays.toString(arr)); //arr in main is unchangedd
-      System.out.println();
-      //findSum(int [] a, int n, int m)
-      System.out.println(findSum(arr, 0, 0));
-      System.out.println(findSum(arr, 1, 0));
-      System.out.println();
-      //diffBetween(double a, double b, double tolerance)
-      diffBetween(6.5, 6.5, 0.001);
-      System.out.println();
-      //givePermutationsOf(char [] ch)
-      givePermutationsOf(chars);
-      //findNumOfOccurences(String str, String phrase)
-      System.out.println(findNumOfOccurences(isAPalindrome, "a"));
-      System.out.println();
-   }
-
 }
